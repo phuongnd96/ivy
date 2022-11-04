@@ -1,0 +1,6 @@
+GlobalResourceTimeOut: 30
+Region: asia-southeast1
+GCP_PROJECT_ID: "dev-org"
+TargetClusterName: "org-cluster"
+BackUpSuccessStatus: "SUCCESSFUL"
+BackUpFailedStatus: "failed"

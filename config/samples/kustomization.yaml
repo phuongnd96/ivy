@@ -1,0 +1,7 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- ivy_v1alpha1_backup.yaml
+- ivy_v1alpha1_restore.yaml
+- ivy_v1alpha1_bigtablebackup.yaml
+- ivy_v1alpha1_bigtablerestore.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

@@ -1,0 +1,20 @@
+# permissions for end users to view bigtablebackups.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: bigtablebackup-viewer-role
+rules:
+- apiGroups:
+  - ivy.dev
+  resources:
+  - bigtablebackups
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - ivy.dev
+  resources:
+  - bigtablebackups/status
+  verbs:
+  - get

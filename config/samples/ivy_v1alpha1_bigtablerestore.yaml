@@ -1,0 +1,13 @@
+apiVersion: ivy.dev/v1alpha1
+kind: BigTableRestore
+metadata:
+  name: bigtablerestore-sample
+spec:
+  backUpId: "123123"
+  sourceProjectId: dev-org
+  sourceInstance: haupc-instance
+  sourceCluster: haupc-instance-c1
+  targetProjectId: dev-org
+  targetInstance: haupc-instance
+  targetCluster: haupc-instance-c1
+  targetTable: balance_test-pr-1

@@ -1,0 +1,46 @@
+domain: dev
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: ivy
+repo: github.com/phuongnd96/ivy
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: dev
+  group: ivy
+  kind: Backup
+  path: github.com/phuongnd96/ivy/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: dev
+  group: ivy
+  kind: Restore
+  path: github.com/phuongnd96/ivy/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: dev
+  group: ivy
+  kind: BigTableBackUp
+  path: github.com/phuongnd96/ivy/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: dev
+  group: ivy
+  kind: BigTableRestore
+  path: github.com/phuongnd96/ivy/api/v1alpha1
+  version: v1alpha1
+version: "3"

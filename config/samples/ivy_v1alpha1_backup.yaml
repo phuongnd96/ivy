@@ -1,0 +1,11 @@
+apiVersion: ivy.dev/v1alpha1
+kind: Backup
+metadata:
+  name: wallet-pr-x
+spec:
+  sqlSourceInstance: wallet-735801ea
+  projectId: dev-org
+  gcsBucket: k-backup-sql-dev
+  excludedDatabases:
+    - information_schema
+    - performance_schema

@@ -1,0 +1,9 @@
+apiVersion: ivy.dev/v1alpha1
+kind: BigTableBackUp
+metadata:
+  name: pr-xxxx
+spec:
+  projectId: dev-org
+  sourceInstance: haupc-instance
+  sourceCluster: haupc-instance-c1
+  sourceTable: balance_test

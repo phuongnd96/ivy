@@ -1,0 +1,24 @@
+# permissions for end users to edit bigtablebackups.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: bigtablebackup-editor-role
+rules:
+- apiGroups:
+  - ivy.dev
+  resources:
+  - bigtablebackups
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ivy.dev
+  resources:
+  - bigtablebackups/status
+  verbs:
+  - get

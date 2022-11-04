@@ -1,0 +1,10 @@
+apiVersion: ivy.dev/v1alpha1
+kind: Restore
+metadata:
+  name: pr-x
+spec:
+  # TODO(user): Add fields here
+  targetCluster: org-cluster
+  targetProjectId: dev-org
+  targetNamespace: test
+  backUpId: k-backup-sql-dev/backup-sample.sql.gz
