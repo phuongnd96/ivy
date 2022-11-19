@@ -2,12 +2,10 @@
 <img src="./docs/static/banner.png" >
 
 # ivy
-A Kubernetes operator to create backup and restore from:
-- Google Cloud SQL
-- Big table
-
-## Description
-Ivy will watch for creation of BackUp Resource and create a dump of your SQLInstance to GCSs
+A Kubernetes operator to:
+- Export CloudSQL into a container running in Kubernetes, more lightweight compare to create an instance from backup.
+- BackUp and Restore Bigtable table.
+ This make dependencies (on GCP) cloning easy to integrate with gitops workflow. For example, you can create a test database on Pull Request and destroy it later. Or you can create a backup of a BigTable table and restore it into another table for testing.
 
 ## Getting Started
 You’ll need a Kubernetes cluster to run against. You can use [KIND](https://sigs.k8s.io/kind) to get a local cluster for testing, or run against a remote cluster.
@@ -23,7 +21,7 @@ kubectl apply -f config/samples/
 2. Build and push your image to the location specified by `IMG`:
 	
 ```sh
-make docker-build docker-push IMG=<some-registry>/ivy:tag
+make docker-build docker-push IMG=registry.org.com/ivy:tag
 ```
 	
 3. Deploy the controller to the cluster with the image specified by `IMG`:
@@ -93,3 +91,4 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+Maintainer @phuongnd96
