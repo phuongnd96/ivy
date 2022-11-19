@@ -1,6 +1,3 @@
-<!-- ![](./docs/static/banner.png | width=100) -->
-<img src="./docs/static/banner.png" >
-
 # ivy
 A Kubernetes operator to:
 - Export CloudSQL into a container running in Kubernetes, more lightweight compare to create an instance from backup.
